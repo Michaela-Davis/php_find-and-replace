@@ -1,0 +1,6 @@
+grab userInput1
+str_split userIntput 1
+makes array of strings
+foreach array as string
+if string = userInput2
+replace with userInput3

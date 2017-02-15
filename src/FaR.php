@@ -2,14 +2,17 @@
     class FaR
     {
 
-        private $user_one;
-        private $user_two;
+        private $sentence;
+        private $find;
+        private $replace;
 
-        function __construct($input_one, $input_two)
+
+        function __construct($input_one, $input_two, $input_three)
         {
-        $this->user_one = $input_one;
-        $this->user_two = $input_two;
-        }
+        $this->sentence = $input_one;
+        $this->find = $input_two;
+        $this->replace = $input_three;
+    }
 
         function FaRChecker()
         {

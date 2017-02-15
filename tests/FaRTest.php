@@ -3,18 +3,19 @@
 
  class FaRTest extends PHPUnit_Framework_TestCase
     {
-        function test_FaRChecker_draw()
+        function test_FaRChecker_basic()
         {
         //arrange
-            $input_one = "rock";
-            $input_two = "rock";
-            $test_RPS = new FaR($input_one, $input_two);
+            $sentence = "I walk the cat";
+            $find = "cat";
+            $replace = "dog";
+            $test_FaR = new FaR($sentence, $find, $replace);
 
         //act
-            $result = $test_RPS->FaRChecker();
+            $result = $test_FaR->FaRChecker();
 
         //assert
-            $this->assertEquals("draw", $result);
+            $this->assertEquals("I walk the dog", $result);
         }
 
     }
