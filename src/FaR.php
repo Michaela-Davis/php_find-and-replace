@@ -16,7 +16,25 @@
 
         function FaRChecker()
         {
+            $sentence = $this->sentence;
+            $find = $this->find;
+            $replace = $this->replace;
 
+            $sentence = explode(" ", $sentence);
+            $result = array();
+            foreach ($sentence as $word)
+            {
+                if ($word == $find)
+                {
+                    $word = $replace;
+                    array_push($result, $word);
+                }else {
+                    array_push($result, $word);
+                }
+
+            }
+            $result = implode(" ", $result);
+            return $result;
         }
     }
 

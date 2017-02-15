@@ -6,7 +6,7 @@
         function test_FaRChecker_basic()
         {
         //arrange
-            $sentence = "I walk the cat";
+            $sentence = "cat I walk the cat";
             $find = "cat";
             $replace = "dog";
             $test_FaR = new FaR($sentence, $find, $replace);
@@ -15,7 +15,7 @@
             $result = $test_FaR->FaRChecker();
 
         //assert
-            $this->assertEquals("I walk the dog", $result);
+            $this->assertEquals("dog I walk the dog", $result);
         }
 
     }
