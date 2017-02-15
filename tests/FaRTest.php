@@ -18,5 +18,20 @@
             $this->assertEquals("dog I walk the dog", $result);
         }
 
+        function test_FaRChecker_partial()
+        {
+        //arrange
+            $sentence = "I walk the catherine cat";
+            $find = "cat";
+            $replace = "dog";
+            $test_FaR = new FaR($sentence, $find, $replace);
+
+        //act
+            $result = $test_FaR->FaRChecker();
+
+        //assert
+            $this->assertEquals("I walk the dogherine dog", $result);
+        }
+
     }
 ?>

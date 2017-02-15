@@ -19,21 +19,10 @@
             $sentence = $this->sentence;
             $find = $this->find;
             $replace = $this->replace;
+            $find = ("/".$find."/");
 
-            $sentence = explode(" ", $sentence);
-            $result = array();
-            foreach ($sentence as $word)
-            {
-                if ($word == $find)
-                {
-                    $word = $replace;
-                    array_push($result, $word);
-                }else {
-                    array_push($result, $word);
-                }
+            $result = preg_replace($find, $replace, $sentence);
 
-            }
-            $result = implode(" ", $result);
             return $result;
         }
     }
